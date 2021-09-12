@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TOperationlogDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TOperationlog">
+    <id column="T_OPERATIONLOG_ID" jdbcType="DECIMAL" property="tOperationlogId" />
+    <result column="T_OPERATIONLOG_NAME" jdbcType="VARCHAR" property="tOperationlogName" />
+    <result column="T_OPERATIONLOG_USERNAME" jdbcType="VARCHAR" property="tOperationlogUsername" />
+    <result column="T_OPERATIONLOG_TIME" jdbcType="TIMESTAMP" property="tOperationlogTime" />
+    <result column="T_OPERATIONLOG_CONTENT" jdbcType="VARCHAR" property="tOperationlogContent" />
+  </resultMap>
+
+</mapper>

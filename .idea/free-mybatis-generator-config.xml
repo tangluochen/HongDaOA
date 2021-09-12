@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistentConfig">
+    <option name="historyConfigList">
+      <map>
+        <entry key="T_ACCESSORYFILE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TAccessoryfileDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TAccessoryfile" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_ACCESSORYFILE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_ACCESSORYFILE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_ACCESSORYFILE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_BRANCHINFO">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TBranchinfoDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TBranchinfo" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_BRANCHINFO" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_BRANCHINFO_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_BRANCHINFO" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_DEPARTINFO">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TDepartinfoDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TDepartinfo" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_DEPARTINFO" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_DEPARTINFO_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_DEPARTINFO" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_FILEINFO">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TFileinfoDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TFileinfo" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_FILEINFO" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_FILEINFO_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_FILEINFO" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_FILETYPEINFO">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TFiletypeinfoDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TFiletypeinfo" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_FILETYPEINFO" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_FILETYPEINFO_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_FILETYPEINFO" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_LOGINLOG">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TLoginlogDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TLoginlog" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_LOGINLOG" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_LOGINLOG_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_LOGINLOG" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MANAGE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TManageDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TManage" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MANAGE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MANAGE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MANAGE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MANAGE_POWER">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TManagePowerDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TManagePower" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MANAGE_POWER" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MANAGE_POWER_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MANAGE_POWER" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MANUALSIGN">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TManualsignDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TManualsign" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MANUALSIGN" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MANUALSIGN_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MANUALSIGN" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MEETINGINFO">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TMeetinginfoDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TMeetinginfo" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MEETINGINFO" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MEETINGINFO_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MEETINGINFO" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MESSAGE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TMessageDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TMessage" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MESSAGE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MESSAGE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MESSAGE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MESSAGETOUSER">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TMessagetouserDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TMessagetouser" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MESSAGETOUSER" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MESSAGETOUSER_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MESSAGETOUSER" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MESSAGETYPE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TMessagetypeDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TMessagetype" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MESSAGETYPE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MESSAGETYPE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MESSAGETYPE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_MYNOTE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TMynoteDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TMynote" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_MYNOTE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_MYNOTE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_MYNOTE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_OPERATELOG">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TOperatelogDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TOperatelog" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_OPERATELOG" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_OPERATELOG_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_OPERATELOG" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_OPERATIONLOG">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TOperationlogDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TOperationlog" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_OPERATIONLOG" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_OPERATIONLOG_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_OPERATIONLOG" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_POWER">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TPowerDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TPower" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_POWER" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_POWER_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_POWER" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_PRECONTRACT">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TPrecontractDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TPrecontract" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_PRECONTRACT" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_PRECONTRACT_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_PRECONTRACT" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_ROLEINFO">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TRoleinfoDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TRoleinfo" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_ROLEINFO" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_ROLEINFO_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_ROLEINFO" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_ROLEINFO_MANAGE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TRoleinfoManageDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TRoleinfoManage" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_ROLEINFO_MANAGE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_ROLEINFO_MANAGE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_ROLEINFO_MANAGE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_ROLERIGHT">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TRolerightDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TRoleright" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_ROLERIGHT" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_ROLERIGHT_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_ROLERIGHT" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_SCHEDULE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TScheduleDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TSchedule" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_SCHEDULE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_SCHEDULE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_SCHEDULE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_SCHEDULEOB">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TScheduleobDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TScheduleob" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_SCHEDULEOB" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_SCHEDULEOB_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_SCHEDULEOB" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_USERINFO">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TUserinfoDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TUserinfo" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_USERINFO" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_USERINFO_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_USERINFO" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_USERSTATE">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TUserstateDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TUserstate" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_USERSTATE" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_USERSTATE_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_USERSTATE" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="T_WORKTIME">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src" />
+              <option name="daoName" value="TWorktimeDao" />
+              <option name="daoPackage" value="com.icss.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src" />
+              <option name="modelName" value="TWorktime" />
+              <option name="modelPackage" value="com.icss.pojo" />
+              <option name="name" value="T_WORKTIME" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="T_WORKTIME_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="T_WORKTIME" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src" />
+              <option name="xmlPackage" value="com.icss.mapper" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

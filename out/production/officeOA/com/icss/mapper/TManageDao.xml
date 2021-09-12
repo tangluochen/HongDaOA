@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TManageDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TManage">
+    <id column="T_MANAGE_ID" jdbcType="DECIMAL" property="tManageId" />
+    <result column="T_MANAGE_NAME" jdbcType="VARCHAR" property="tManageName" />
+  </resultMap>
+  <select id="selectByRoleInfoid" resultMap="com.icss.dao.TManageDao.BaseResultMap">
+    select * from T_MANAGE  WHERE T_MANAGE_ID IN(SELECT T_MANAGE_ID FROM T_ROLEINFO_MANAGE where T_ROLEINFO_ID=#{tRoleinfoId})
+  </select>
+
+</mapper>

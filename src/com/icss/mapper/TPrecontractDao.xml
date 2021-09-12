@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TPrecontractDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TPrecontract">
+    <id column="T_PRECONTRACT_ID" jdbcType="DECIMAL" property="tPrecontractId" />
+  <association property="tUserinfo" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap"/>
+  <association property="tSchedule" resultMap="com.icss.dao.TScheduleDao.BaseResultMap"/>
+  </resultMap>
+
+</mapper>

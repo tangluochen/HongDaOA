@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TAccessoryfileDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TAccessoryfile">
+    <id column="T_ACCESSORYFILE_ID" jdbcType="DECIMAL" property="tAccessoryfileId" />
+    <result column="T_ACCESSORYFILE_NAME" jdbcType="VARCHAR" property="tAccessoryfileName" />
+    <result column="T_ACCESSORYFILE_SIZE" jdbcType="DECIMAL" property="tAccessoryfileSize" />
+    <result column="T_ACCESSORYFILE_CREATEDATE" jdbcType="TIMESTAMP" property="tAccessoryfileCreatedate" />
+    <result column="T_ACCESSORYFILE_PATH" jdbcType="VARCHAR" property="tAccessoryfilePath" />
+    <association property="tFileinfo" resultMap="com.icss.dao.TFileinfoDao.BaseResultMap"/>
+    <association property="tFiletypeinfo" resultMap="com.icss.dao.TFiletypeinfoDao.BaseResultMap"/>
+  </resultMap>
+
+</mapper>

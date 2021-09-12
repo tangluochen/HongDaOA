@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TManualsignDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TManualsign">
+    <id column="T_MANUALSIGN_ID" jdbcType="DECIMAL" property="tManualsignId" />
+    <result column="T_MANUALSIGN_TIME" jdbcType="TIMESTAMP" property="tManualsignTime" />
+    <result column="T_MANUALSIGN_DESC" jdbcType="VARCHAR" property="tManualsignDesc" />
+    <result column="T_MANUALSIGN_TAG" jdbcType="DECIMAL" property="tManualsignTag" />
+    <association property="tUserinfo" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap"/>
+  </resultMap>
+  <insert id="insertSign">
+insert into t_manualsign values(SIGN_SEQ.NEXTVAL,#{id},SYSDATE,#{tManualsignDesc},#{status})
+  </insert>
+  <update id="updateSignTime">
+    UPDATE t_manualsign SET T_MANUALSIGN_TIME = SYSDATE WHERE T_MANUALSIGN_ID=#{tManualsignId}
+  </update>
+  <select id="selectSignByUser" resultMap="com.icss.dao.TManualsignDao.BaseResultMap">
+      SELECT * from T_MANUALSIGN join T_USERINFO on T_MANUALSIGN.T_USERINFO_ID=T_USERINFO.T_USERINFO_ID where
+      T_MANUALSIGN.T_USERINFO_ID=#{id}
+    </select>
+  <select id="selectSign" resultMap="com.icss.dao.TManualsignDao.BaseResultMap">
+     SELECT * from T_MANUALSIGN join T_USERINFO on T_MANUALSIGN.T_USERINFO_ID=T_USERINFO.T_USERINFO_ID
+  </select>
+  <select id="selectSignByStatus" resultMap="com.icss.dao.TManualsignDao.BaseResultMap">
+    SELECT
+	*
+FROM
+	T_MANUALSIGN
+WHERE
+	TO_CHAR (T_MANUALSIGN_TIME,'yyyy.mm.dd') = TO_CHAR (SYSDATE, 'yyyy.mm.dd')
+AND T_MANUALSIGN_TAG = #{status}
+AND T_USERINFO_ID = #{userId}
+  </select>
+  <select id="selectSignByUsername" resultMap="com.icss.dao.TManualsignDao.BaseResultMap">
+    SELECT * from T_MANUALSIGN join T_USERINFO on T_MANUALSIGN.T_USERINFO_ID=T_USERINFO.T_USERINFO_ID where
+      T_USERINFO_NAME like '%${username}%'
+  </select>
+
+</mapper>

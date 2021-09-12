@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TScheduleDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TSchedule">
+    <id column="T_SCHEDULE_ID" jdbcType="DECIMAL" property="tScheduleId" />
+    <result column="T_SCHEDULE_TITLE" jdbcType="VARCHAR" property="tScheduleTitle" />
+    <result column="T_SCHEDULE_ADDRESS" jdbcType="VARCHAR" property="tScheduleAddress" />
+    <result column="T_SCHEDULE_BEGINTIME" jdbcType="VARCHAR" property="tScheduleBegintime" />
+    <result column="T_SCHEDULE_ENDTIME" jdbcType="VARCHAR" property="tScheduleEndtime" />
+    <result column="T_SCHEDULE_CONTENT" jdbcType="VARCHAR" property="tScheduleContent" />
+    <result column="T_SCHEDULE_CREATEUSER" jdbcType="VARCHAR" property="tScheduleCreateuser" />
+    <association property="tMeetinginfo" resultMap="com.icss.dao.TMeetinginfoDao.BaseResultMap"/>
+  </resultMap>
+  <insert id="insertSchedule">
+      INSERT INTO t_schedule
+VALUES
+	(
+		SCHEDULE_SEQ.NEXTVAL,
+		#{tSchedule.tScheduleTitle},
+		#{tSchedule.tScheduleAddress},
+		#{tSchedule.tMeetinginfo.tMeetinginfoId},
+		#{tSchedule.tScheduleBegintime},
+		#{tSchedule.tScheduleEndtime},
+		#{tSchedule.tScheduleContent},
+		#{tSchedule.tScheduleCreateuser}
+	)
+  </insert>
+    <update id="updateSchedule">
+        update T_SCHEDULE SET
+       T_SCHEDULE_TITLE= #{tSchedule.tScheduleTitle},
+		T_SCHEDULE_ADDRESS=#{tSchedule.tScheduleAddress},
+		T_MEETINGINFO_ID=#{tSchedule.tMeetinginfo.tMeetinginfoId},
+		T_SCHEDULE_BEGINTIME=#{tSchedule.tScheduleBegintime},
+		T_SCHEDULE_ENDTIME=#{tSchedule.tScheduleEndtime},
+		T_SCHEDULE_CONTENT=#{tSchedule.tScheduleContent},
+		T_SCHEDULE_CREATEUSER=#{tSchedule.tScheduleCreateuser}
+		 where T_SCHEDULE_ID=#{tSchedule.tScheduleId}
+    </update>
+    <delete id="deleteScheduleById">
+        delete from T_SCHEDULE WHERE T_SCHEDULE_ID=#{tScheduleId}
+    </delete>
+    <select id="selectAllSchedules" resultMap="com.icss.dao.TScheduleDao.BaseResultMap">
+      select * from T_SM_VIEW where R between #{start} and #{end}
+    </select>
+  <select id="selectAllscheduleCounts" resultType="java.lang.Integer">
+     select count(*) from T_SM_VIEW
+  </select>
+  <select id="selectAllSchedulesByname" resultMap="com.icss.dao.TScheduleDao.BaseResultMap">
+ SELECT
+	T_SM.T_SCHEDULE_ID,
+T_SM.T_SCHEDULE_TITLE,
+T_SM.T_SCHEDULE_ADDRESS,
+T_SM.T_MEETINGINFO_ID,
+T_SM.T_SCHEDULE_BEGINTIME,
+T_SM.T_SCHEDULE_ENDTIME,
+T_SM.T_SCHEDULE_CONTENT,
+T_SM.T_SCHEDULE_CREATEUSER,
+T_SM.T_MEETINGINFO_NAME
+FROM
+	(
+		SELECT
+ROWNUM R ,
+			T_SCHEDULE.T_SCHEDULE_ID,
+T_SCHEDULE.T_SCHEDULE_TITLE,
+T_SCHEDULE.T_SCHEDULE_ADDRESS,
+T_SCHEDULE.T_MEETINGINFO_ID,
+T_SCHEDULE.T_SCHEDULE_BEGINTIME,
+T_SCHEDULE.T_SCHEDULE_ENDTIME,
+T_SCHEDULE.T_SCHEDULE_CONTENT,
+T_SCHEDULE.T_SCHEDULE_CREATEUSER,
+T_MEETINGINFO.T_MEETINGINFO_NAME
+		FROM
+			T_SCHEDULE
+		JOIN T_MEETINGINFO ON T_SCHEDULE.T_MEETINGINFO_ID = T_MEETINGINFO.T_MEETINGINFO_ID
+WHERE T_SCHEDULE_TITLE like '%${name}%'
+ORDER BY T_SCHEDULE_ID
+	) T_SM  where R between #{start} and #{end}
+  </select>
+  <select id="selectAllscheduleCountsByname" resultType="java.lang.Integer">
+     select count(*) from T_SM_VIEW where  T_SCHEDULE_TITLE like '%${name}%'
+  </select>
+    <select id="selectScheduleByid" resultMap="com.icss.dao.TScheduleDao.BaseResultMap">
+        select * from T_SCHEDULE WHERE T_SCHEDULE_ID = #{tScheduleId}
+    </select>
+    <select id="selectAllDepartSchedule" resultMap="com.icss.dao.TScheduleDao.BaseResultMap">
+        select * from T_SCHEDULE where T_MEETINGINFO_ID=1
+    </select>
+
+</mapper>

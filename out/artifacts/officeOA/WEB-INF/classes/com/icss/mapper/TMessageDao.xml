@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TMessageDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TMessage">
+    <id column="T_MESSAGE_ID" jdbcType="DECIMAL" property="tMessageId" />
+    <result column="T_MESSAGE_TITLE" jdbcType="VARCHAR" property="tMessageTitle" />
+    <result column="T_MESSAGE_CONTENT" jdbcType="VARCHAR" property="tMessageContent" />
+    <result column="T_MESSAGE_BEGINTIME" jdbcType="TIMESTAMP" property="tMessageBegintime" />
+    <result column="T_MESSAGE_ENDTIME" jdbcType="TIMESTAMP" property="tMessageEndtime" />
+    <result column="T_MESSAGE_IFPUBLISH" jdbcType="VARCHAR" property="tMessageIfpublish" />
+    <result column="T_MESSAGE_RECORDTIME" jdbcType="TIMESTAMP" property="tMessageRecordtime" />
+    <association property="tUserinfo" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap"/>
+    <association property="tMessagetype" resultMap="com.icss.dao.TMessagetypeDao.BaseResultMap"/>
+  </resultMap>
+
+</mapper>

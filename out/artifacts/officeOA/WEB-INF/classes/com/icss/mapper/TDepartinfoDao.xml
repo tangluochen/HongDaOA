@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TDepartinfoDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TDepartinfo">
+    <id column="T_DEPARTINFO_ID" jdbcType="DECIMAL" property="tDepartinfoId" />
+    <result column="T_DEPARTINFO_NAME" jdbcType="VARCHAR" property="tDepartinfoName" />
+    <result column="T_DEPARTINFO_TEL" jdbcType="VARCHAR" property="tDepartinfoTel" />
+    <result column="T_DEPARTINFO_MOBILETEL" jdbcType="VARCHAR" property="tDepartinfoMobiletel" />
+    <result column="T_DEPARTINFO_FAXES" jdbcType="VARCHAR" property="tDepartinfoFaxes" />
+    <association property="tBranchinfo" resultMap="com.icss.dao.TBranchinfoDao.BaseResultMap"/>
+    <association property="tUserinfo" javaType="com.icss.pojo.TUserinfo">
+      <id column="T_USERINFO_ID" jdbcType="DECIMAL" property="tUserinfoId" />
+      <result column="T_USERINFO_NAME" jdbcType="VARCHAR" property="tUserinfoName" />
+      <result column="T_USERINFO_PASSWORD" jdbcType="VARCHAR" property="tUserinfoPassword" />
+      <result column="T_USERINFO_GENDER" jdbcType="VARCHAR" property="tUserinfoGender" />
+    </association>
+  </resultMap>
+  <insert id="addDepart">
+      insert into T_DEPARTINFO values(T_DEPARTINFO_SEQ.NEXTVAL,#{tDepartinfo.tDepartinfoName},#{tDepartinfo.tUserinfo.tUserinfoId},#{tDepartinfo.tDepartinfoTel},#{tDepartinfo.tDepartinfoMobiletel},
+      #{tDepartinfo.tDepartinfoFaxes},#{tDepartinfo.tBranchinfo.tBranchinfoId})
+  </insert>
+  <update id="updateDepart">
+    update T_DEPARTINFO set
+        T_DEPARTINFO_NAME=#{tDepartinfo.tDepartinfoName},
+        T_USERINFO_ID=#{tDepartinfo.tUserinfo.tUserinfoId},
+        T_DEPARTINFO_TEL=#{tDepartinfo.tDepartinfoTel},
+        T_DEPARTINFO_MOBILETEL=#{tDepartinfo.tDepartinfoMobiletel},
+        T_DEPARTINFO_FAXES=#{tDepartinfo.tDepartinfoFaxes},
+        T_BRANCHINFO_ID=#{tDepartinfo.tBranchinfo.tBranchinfoId}
+        where T_DEPARTINFO_ID=#{tDepartinfo.tDepartinfoId}
+  </update>
+  <delete id="deleteByDid">
+    delete from T_DEPARTINFO where T_DEPARTINFO_ID=#{tDepartinfoId}
+  </delete>
+  <delete id="deleteDeparts">
+    delete from T_DEPARTINFO where T_DEPARTINFO_ID in
+    <foreach collection="array" item="item" index="index" open="("
+             separator="," close=")">
+      #{item}
+    </foreach>
+  </delete>
+  <select id="selectAllDepart" resultMap="com.icss.dao.TDepartinfoDao.BaseResultMap">
+      SELECT * FROM
+         T_DEPARTINFO
+JOIN T_BRANCHINFO ON T_DEPARTINFO.T_BRANCHINFO_ID=T_BRANCHINFO.T_BRANCHINFO_ID
+JOIN T_USERINFO ON T_USERINFO.T_USERINFO_ID = T_DEPARTINFO.T_USERINFO_ID
+
+    </select>
+    <select id="selectDepartByBranch" resultMap="com.icss.dao.TDepartinfoDao.BaseResultMap">
+        SELECT
+	*
+FROM
+	T_DEPARTINFO
+WHERE
+	T_BRANCHINFO_ID = #{tBranchinfo.tBranchinfoId}
+    </select>
+    <select id="selectbranchID" resultType="java.lang.Integer">
+        select * from T_DEPARTINFO where T_DEPARTINFO.T_DEPARTINFO_ID = #{deptid}
+    </select>
+    <select id="selectDepartByid"  resultMap="com.icss.dao.TDepartinfoDao.BaseResultMap">
+        select * from T_DEPARTINFO where T_DEPARTINFO_ID=#{deptid}
+    </select>
+
+</mapper>

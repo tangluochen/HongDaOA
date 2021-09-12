@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TRoleinfoManageDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TRoleinfoManage">
+    <id column="T_ROLEINFO_MANAGE_ID" jdbcType="DECIMAL" property="tRoleinfoManageId" />
+    <association property="tMessage" resultMap="com.icss.dao.TMessageDao.BaseResultMap"/>
+    <association property="tRoleinfo" resultMap="com.icss.dao.TRoleinfoDao.BaseResultMap"/>
+  </resultMap>
+
+</mapper>

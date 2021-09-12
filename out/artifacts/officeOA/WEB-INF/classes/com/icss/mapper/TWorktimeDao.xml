@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TWorktimeDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TWorktime">
+    <id column="T_WORKTIME_ID" jdbcType="DECIMAL" property="tWorktimeId" />
+    <result column="T_WORKTIME_ONDUTYTIME" jdbcType="VARCHAR" property="tWorktimeOndutytime" />
+    <result column="T_WORKTIME_OFFDUTYTIME" jdbcType="VARCHAR" property="tWorktimeOffdutytime" />
+  </resultMap>
+    <select id="selectWoketime" resultMap="com.icss.dao.TWorktimeDao.BaseResultMap">
+      SELECT * from T_WORKTIME
+    </select>
+
+</mapper>

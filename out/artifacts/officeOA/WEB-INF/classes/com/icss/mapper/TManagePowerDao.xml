@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TManagePowerDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TManagePower">
+    <id column="T_MANAGE_POWER_ID" jdbcType="DECIMAL" property="tManagePowerId" />
+    <association property="tManage" resultMap="com.icss.dao.TManageDao.BaseResultMap"/>
+    <association property="tPower" resultMap="com.icss.dao.TPowerDao.BaseResultMap"/>
+  </resultMap>
+
+</mapper>

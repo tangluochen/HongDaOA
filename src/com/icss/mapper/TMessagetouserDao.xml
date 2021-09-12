@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TMessagetouserDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TMessagetouser">
+    <id column="T_MESSAGETOUSER_ID" jdbcType="DECIMAL" property="tMessagetouserId" />
+    <result column="T_ID_READ" jdbcType="DECIMAL" property="tIdRead" />
+    <association property="tMessage" resultMap="com.icss.dao.TMessageDao.BaseResultMap"/>
+    <association property="tUserinfo" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap"/>
+  </resultMap>
+
+</mapper>

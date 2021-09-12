@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TFiletypeinfoDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TFiletypeinfo">
+    <id column="T_FILETYPEINFO_ID" jdbcType="DECIMAL" property="tFiletypeinfoId" />
+    <result column="T_FILETYPEINFO_NAME" jdbcType="VARCHAR" property="tFiletypeinfoName" />
+    <result column="T_FILETYPEINFO_IMAGE" jdbcType="VARCHAR" property="tFiletypeinfoImage" />
+    <result column="T_FILETYPEINFO_SUFFIX" jdbcType="VARCHAR" property="tFiletypeinfoSuffix" />
+  </resultMap>
+    <select id="selectIdByName" resultType="java.lang.Integer">
+      select T_FILETYPEINFO_ID from T_FILETYPEINFO where T_FILETYPEINFO_NAME=#{filetypename}
+    </select>
+
+</mapper>

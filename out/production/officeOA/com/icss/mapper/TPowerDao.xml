@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TPowerDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TPower">
+    <id column="T_POWER_ID" jdbcType="DECIMAL" property="tPowerId" />
+    <result column="T_POWER_NAME" jdbcType="VARCHAR" property="tPowerName" />
+    <result column="T_POWER_URI" jdbcType="VARCHAR" property="tPowerUri" />
+  </resultMap>
+  <select id="selectByManageid" resultMap="com.icss.dao.TPowerDao.BaseResultMap">
+    select TP.T_POWER_ID,T_POWER_NAME,T_POWER_URI FROM T_POWER tp JOIN T_MANAGE_POWER tmp ON tp.T_POWER_ID=tmp.T_POWER_ID where TMP.T_MANAGE_ID=#{tManageId}
+  </select>
+
+</mapper>

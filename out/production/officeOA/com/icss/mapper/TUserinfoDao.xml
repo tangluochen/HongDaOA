@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TUserinfoDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TUserinfo">
+    <id column="T_USERINFO_ID" jdbcType="DECIMAL" property="tUserinfoId" />
+    <result column="T_USERINFO_NAME" jdbcType="VARCHAR" property="tUserinfoName" />
+    <result column="T_USERINFO_PASSWORD" jdbcType="VARCHAR" property="tUserinfoPassword" />
+    <result column="T_USERINFO_GENDER" jdbcType="VARCHAR" property="tUserinfoGender" />
+    <association property="tDepartinfo" resultMap="com.icss.dao.TDepartinfoDao.BaseResultMap"/>
+    <association property="tRoleinfo" resultMap="com.icss.dao.TRoleinfoDao.BaseResultMap"/>
+    <association property="tUserstate" resultMap="com.icss.dao.TUserstateDao.BaseResultMap"/>
+  </resultMap>
+  <insert id="insertUser">
+     insert into t_userinfo values(T_USERINFO_SEQ.NEXTVAL,#{tUserinfo.tUserinfoName},#{tUserinfo.tUserinfoPassword},#{tUserinfo.tDepartinfo.tDepartinfoId},#{tUserinfo.tUserinfoGender},#{tUserinfo.tRoleinfo.tRoleinfoId},#{tUserinfo.tUserstate.tUserstateId})
+  </insert>
+  <update id="updateUser">
+    update t_userinfo set T_USERINFO_NAME=#{tUserinfo.tUserinfoName},T_USERINFO_PASSWORD=#{tUserinfo.tUserinfoPassword},T_USERINFO_GENDER=#{tUserinfo.tUserinfoGender},T_DEPARTINFO_ID=#{tUserinfo.tDepartinfo.tDepartinfoId},T_ROLEINFO_ID=#{tUserinfo.tRoleinfo.tRoleinfoId},T_USERSTATE_ID=#{tUserinfo.tUserstate.tUserstateId}
+        where T_USERINFO_ID=#{tUserinfo.tUserinfoId}
+  </update>
+  <delete id="deleteAllUser">
+    delete from t_userinfo where T_USERINFO_ID=#{tUserinfoId}
+  </delete>
+  <select id="selectTUserinfoByuname" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap">
+    select * from t_userinfo tu where T_USERINFO_NAME=#{tUserinfoName}
+  </select>
+  <select id="selectAllUser" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap">
+    select * from t_userinfo where T_ROLEINFO_ID=2
+  </select>
+    <select id="selectAllUserFenYe" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap">
+      SELECT
+	        *
+    FROM t_user_view WHERE R BETWEEN #{page} AND #{pageSize}
+    </select>
+  <select id="selectCounts" resultType="java.lang.Integer">
+      SELECT
+	       count(*)
+    FROM t_user_view
+  </select>
+  <select id="selectAllUserByName" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap">
+select * from
+(SELECT ROWNUM R, TS."T_USERINFO_ID",
+TS."T_USERINFO_NAME",
+TS."T_USERINFO_PASSWORD" ,
+TS."T_DEPARTINFO_ID",
+TS."T_USERINFO_GENDER",
+TS."T_ROLEINFO_ID",
+TS."T_USERSTATE_ID",
+TS."T_DEPARTINFO_NAME",
+TS."T_ROLEINFO_NAME",
+TS."T_USERSTATE_NAME"
+FROM
+(SELECT
+--ROWNUM R,
+TU."T_USERINFO_ID",
+TU."T_USERINFO_NAME",
+TU."T_USERINFO_PASSWORD" ,
+TU."T_DEPARTINFO_ID",
+TU."T_USERINFO_GENDER",
+TU."T_ROLEINFO_ID",
+TU."T_USERSTATE_ID",
+TU."T_DEPARTINFO_NAME",
+TU."T_ROLEINFO_NAME",
+TU."T_USERSTATE_NAME"
+ FROM(
+SELECT
+T_USERINFO."T_USERINFO_ID",
+T_USERINFO."T_USERINFO_NAME",
+T_USERINFO."T_USERINFO_PASSWORD" ,
+T_USERINFO."T_DEPARTINFO_ID",
+T_USERINFO."T_USERINFO_GENDER",
+T_USERINFO."T_ROLEINFO_ID",
+T_USERINFO."T_USERSTATE_ID",
+T_DEPARTINFO."T_DEPARTINFO_NAME",
+T_ROLEINFO."T_ROLEINFO_NAME",
+T_USERSTATE."T_USERSTATE_NAME"
+from T_USERINFO
+JOIN T_DEPARTINFO ON T_DEPARTINFO.T_DEPARTINFO_ID = T_USERINFO.T_DEPARTINFO_ID
+JOIN T_ROLEINFO ON T_ROLEINFO.T_ROLEINFO_ID = T_USERINFO.T_ROLEINFO_ID
+JOIN T_USERSTATE ON T_USERSTATE.T_USERSTATE_ID=T_USERINFO.T_USERSTATE_ID
+WHERE T_USERINFO.T_ROLEINFO_ID=2
+ORDER BY T_USERINFO.T_USERINFO_ID
+)TU where T_USERINFO_NAME like '%${tUserinfoName}%')TS)  where R between #{page} AND #{pageSize}
+  </select>
+  <select id="selectAllUserByRole" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap">
+    SELECT
+	        *
+    FROM t_user_view where T_ROLEINFO_ID=#{tRoleInfoId}
+  </select>
+  <select id="selectUserRole" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap">
+    SELECT
+	        *
+    FROM t_user_view where T_USERINFO_ID=#{tUserInfoId}
+  </select>
+  <select id="selectCountsByName" resultType="java.lang.Integer">
+    SELECT
+	       count(*)
+    FROM t_user_view where   T_USERINFO_NAME like '%${name}%'
+  </select>
+    <select id="selectAlluser" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap">
+      select * from T_USERINFO
+    </select>
+
+
+</mapper>

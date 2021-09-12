@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TLoginlogDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TLoginlog">
+    <id column="T_LOGINLOG_ID" jdbcType="DECIMAL" property="tLoginlogId" />
+    <result column="T_LOGINLOG_TIME" jdbcType="TIMESTAMP" property="tLoginlogTime" />
+    <result column="T_LOGINLOG_IFSUCCESS" jdbcType="VARCHAR" property="tLoginlogIfsuccess" />
+    <result column="T_LOGINLOG_USERIP" jdbcType="VARCHAR" property="tLoginlogUserip" />
+    <result column="T_LOGINLOG_DESC" jdbcType="VARCHAR" property="tLoginlogDesc" />
+    <association property="tUserinfo" resultMap="com.icss.dao.TUserinfoDao.BaseResultMap"/>
+  </resultMap>
+  <insert id="insertLoginLog">
+    insert into t_loginlog values(LOGINLOG_SEQ.nextval,#{userid},SYSDATE,'1',#{ip},'1')
+  </insert>
+  <delete id="deleteLog">
+    delete from t_loginlog where T_LOGINLOG_ID=#{id}
+  </delete>
+  <select id="selectAllLog" resultMap="com.icss.dao.TLoginlogDao.BaseResultMap">
+    select * from t_loginlog join t_userinfo on t_loginlog.T_USERINFO_ID=t_userinfo.T_USERINFO_ID
+  </select>
+
+</mapper>

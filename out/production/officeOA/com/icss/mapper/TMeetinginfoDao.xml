@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TMeetinginfoDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TMeetinginfo">
+    <id column="T_MEETINGINFO_ID" jdbcType="DECIMAL" property="tMeetinginfoId" />
+    <result column="T_MEETINGINFO_NAME" jdbcType="VARCHAR" property="tMeetinginfoName" />
+  </resultMap>
+    <select id="selectAllMeetingInfo" resultMap="com.icss.dao.TMeetinginfoDao.BaseResultMap">
+      select * from T_MEETINGINFO
+    </select>
+
+
+</mapper>

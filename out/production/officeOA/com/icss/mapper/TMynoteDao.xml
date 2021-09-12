@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.TMynoteDao">
+  <resultMap id="BaseResultMap" type="com.icss.pojo.TMynote">
+    <id column="T_MYNOTE_ID" jdbcType="DECIMAL" property="tMynoteId" />
+    <result column="T_MYNOTE_TITLE" jdbcType="VARCHAR" property="tMynoteTitle" />
+    <result column="T_MYNOTE_CONTENT" jdbcType="VARCHAR" property="tMynoteContent" />
+    <result column="T_MYNOTE_CREATETIME" jdbcType="TIMESTAMP" property="tMynoteCreatetime" />
+    <result column="T_MYNOTE_CREATEUSER" jdbcType="VARCHAR" property="tMynoteCreateuser" />
+  </resultMap>
+    <select id="selectAllNotes" resultMap="com.icss.dao.TMynoteDao.BaseResultMap">
+      select * from T_MYNOTE
+    </select>
+
+</mapper>

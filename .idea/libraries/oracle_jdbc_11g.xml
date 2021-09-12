@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="oracle-jdbc-11g">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/oracle-jdbc-11g.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
